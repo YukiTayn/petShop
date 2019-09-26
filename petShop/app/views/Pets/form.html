@@ -1,0 +1,14 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+
+<h1>Cadastro de Pets</h1>
+
+<form action="@{Pets.cadastro}" method="post">
+Raca:  <input type="text" name="pet.raca" value="${pet?.raca}"><br>
+Idade: <input type="text" name="pet.idade" value="${pet?.idade}"><br>
+Peso: <input type="text" name="pet.peso" value="${pet?.peso}"><br>
+Carteira de Vacina: <input type="text" name="pet.carteiraVacina" value="${pet?.carteiraVacina}"><br>
+
+<input type="submit" value="Enviar">
+
+</form>

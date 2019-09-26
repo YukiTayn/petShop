@@ -1,0 +1,51 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+
+
+#{if session.get("usuarioID")}
+	<li><a href="">${session.get("nomeUsuario")}</a></li> 
+	<li><a href="@{Login.logout()}">Logout</a></li>
+#{/if}
+#{else}
+
+
+
+
+  <div class="container">
+
+    <form class="login-form" action="@{Login.autenticar( email, senha)}">
+      <div class="login-wrap">
+      <p class="login-img"><i class="icon_lock_alt"></i></p>
+        
+        <div class="input-group">
+          <span class="input-group-addon"><i class="icon_profile"></i></span>
+          <input name="email" type="text" class="form-control" placeholder="Email" autofocus></br>
+        </div>
+        <div class="input-group">
+          <span class="input-group-addon"><i class="icon_key_alt"></i></span>
+          <input name="senha" type = "password" class="form-control" placeholder="Senha" autofocus><br>
+        </div>
+        <label class="checkbox">
+                <input type="checkbox" value="remember-me"> Remember me</a></span>
+                <span class="pull-right"> <a href="#"> Forgot Password?</a></span>
+            </label>
+        <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
+        <button class="btn btn-info btn-lg btn-block" type="submit">Signup</button>
+        
+      </div>
+      
+    </form>
+
+<!--  <form action="">
+<div class="login-wrap">
+        <p class="login-img"><i class="icon_lock_alt"></i></p>
+<div class="input-group">
+          <span class="input-group-addon"><i class="icon_profile"></i></span>
+          
+          
+        </div>
+	  </div>
+	
+	
+	<button>Entrar</button> 
+</form>-->#{/else}

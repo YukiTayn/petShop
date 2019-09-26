@@ -1,0 +1,40 @@
+Cliente(Laércio):
+   nome: Laércio Junior
+   username: laerciojr
+   email: lalajr16@gmail.com
+   senha: 20
+   dataNascimento: 02/03/1999
+   endereco: Rua das primaveras vermelhas
+
+Cliente(Vitoria):
+   nome: Vitoria Rodrigues
+   username: vivi02
+   email: vitoria03Rodri@gmail.com
+   senha: 24687
+   dataNascimento: 17/09/2000
+   endereco: Rua das Védelias
+  
+   
+Veterinario(Renata):
+   tipoUsuario: Veterinario
+   nome: Renata Heloyna
+   username: renataHelo
+   email: renata01@gmail.com
+   senha: 326598
+   crmv: 14526
+   
+   
+Veterinario(Jullyermeson):
+   tipoUsuario: Veterinario
+   nome: Jullyermeson menezes
+   username: JullyMenezes
+   email: jully@gmail.com
+   senha: 30
+   crmv: 842369
+   
+   
+Usuario(Admin):
+   tipoUsuario: admin
+   nome: Admin Admin
+   email: Admin01@gmail.com
+   senha: ad

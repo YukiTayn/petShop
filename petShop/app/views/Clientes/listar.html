@@ -1,0 +1,21 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+
+<h1>Listagem de Clientes</h1>
+<br>
+<form action="@{Clientes.pesquisar()}">
+	Buscar pelo Nome: <input type="text" name="porNome">
+	<input type="submit" name="Pesquisar">
+</form>
+<ul>
+#{list items:clientes, as:'cl'}
+	<li>${cl.nome} | ${cl.endereco} | <a
+		href="@{Clientes.remover(cl.id)}"> Remover</a> <a
+		href="@{Clientes.editar(cl.id)}"> Editar</a>
+	</li> 
+#{/list}
+#{else}
+	Não há usuarios cadastrados!
+#{/else}
+</ul>
+

@@ -1,0 +1,14 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+
+<h1>Formulario de Veterinario</h1>
+
+<form action="@{Veterinarios.cadsVeterinario}" method="post">
+	<!-- colocar id -->
+	<input type="hidden" name="vetereniario.id" value="${ver?.id}">
+	Nome:<input type="text" name="veterinario.nome" value="${ver?.nome}"><br>
+	E-mail:<input type="text" name="veterinario.email" value="${ver?.email}"><br>
+	CRMV:<input type="text" name="veterinario.crmv" value="${ver?.nome}"><br>
+	<input type="submit" value="Enviar">
+
+</form>

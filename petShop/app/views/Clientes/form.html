@@ -1,0 +1,18 @@
+#{extends 'main.html' /} 
+#{set title:'Home' /}
+
+<h1>Cadastro de Cliente</h1>
+
+<form action="@{Clientes.cadastro}" method="post" >
+	<input type ="hidden" name="Cliente.id"  value= "${cl?.id}">
+	
+	Nome:<input type="text" name="Cliente.nome" value="${cl?.nome}"><br>
+	E-mail:<input type="text" name="Cliente.email" value="${cl?.email}"><br>
+	Data de Nascimento:<input type="Cliente.date" name="dataNascimento" value="${cl?.dataNascimento}"><br>
+	Endereco<input type="text" name="Cliente.endereco" value="${cl?.endereco}"><br>
+	Senha: <input type= "password" name="Cliente.senha" value="${cl?.senha}">
+	Tipo de Usuarios<input type= "" name="" value="">
+	
+	
+	<input type="submit" value="Enviar">
+</form>

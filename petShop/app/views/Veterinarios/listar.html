@@ -1,0 +1,20 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+
+<h1>Listagem de Veterinarios</h1>
+<br>
+<form action="@{Veterinarios.pesquisar()}">
+	Buscar pelo CRMV: <input type="text" name="parcrmv">
+	<input type="submit" name="Pesquisar">
+</form>
+<ul>
+#{list items:veter, as:'vete'}
+	<li>${vete.nome} | ${vete.crmv} | 
+		<a href="@{Veterinarios.remover(vete.id)}"> Remover</a> 
+		<a href="@{Veterinarios.editar(vete.id)}"> Editar</a>
+	</li> 
+#{/list}
+#{else}
+	Nao ha Veterinarios cadastrados!
+#{/else}
+</ul>

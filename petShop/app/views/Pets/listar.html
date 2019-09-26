@@ -1,0 +1,25 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+
+<h1>Listagem de Pets</h1>
+
+<form action="@{Pets.pesquisar()}">
+Buscar pet: <input type="text" name="pet.Raca">
+<input type="submit" value="pesquisar">
+
+</form>
+<ul>
+#{list items:pet, as: 'pet'}
+		<li>${pet.raca} | ${pet.idade} | 
+			<a href="@{Pets.remover(pet.id)}">Remover</a>
+            <a href="@{Pets.editar(pet.id)}">Editar</a>
+		</li>
+
+#{/list}
+#{else}
+	Esse pet nao possui cadastro!
+#{/else}
+
+</ul>
+								
+

@@ -1,0 +1,13 @@
+#{extends 'main.html' /} 
+#{set title:'Home' /}
+
+<h1>Cadastro do Admin</h1>
+
+<form action="@{Clientes.cadastro}" method="post" >
+	<input type ="hidden" name="Cliente.id"  value= "${cl?.id}">
+	
+	Nome:<input type="text" name="Admin.nome" value="${cl?.nome}"><br>
+	E-mail:<input type="text" name="Admin.email" value="${cl?.email}"><br>
+	Senha: <input type= "password" name="Admin.senha" value="${cl?.senha}">
+	<input type="submit" value="Enviar">
+</form>
